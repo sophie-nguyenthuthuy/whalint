@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "whalint"
+version = "0.1.0"
+description = "A tiny, zero-dependency Dockerfile linter where every rule is one small file"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Sophie Nguyen", email = "sophie.nguyenthuthuy@gmail.com" }]
+keywords = ["dockerfile", "linter", "docker", "lint", "static-analysis"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.urls]
+Homepage = "https://github.com/sophie-nguyenthuthuy/whalint"
+
+[project.scripts]
+whalint = "whalint.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["whalint*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

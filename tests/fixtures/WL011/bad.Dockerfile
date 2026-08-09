@@ -1,0 +1,2 @@
+FROM debian:12-slim
+EXPOSE 8080 22

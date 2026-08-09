@@ -1,0 +1,4 @@
+FROM python:3.12-slim
+ARG API_KEY
+ENV APP_TOKEN=$API_KEY
+ENV APP_MODE=production
